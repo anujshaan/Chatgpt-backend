@@ -14,7 +14,7 @@ export const callAPI = async(req:Request,res:Response) =>{
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${req.body.message}`,
-      max_tokens:2000
+      max_tokens:2048
     });
     console.log(response.data.choices[0].text)
     // return response.data.choices[0].text;
